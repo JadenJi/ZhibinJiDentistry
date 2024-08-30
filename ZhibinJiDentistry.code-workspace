@@ -1,9 +1,10 @@
 {
 	"folders": [
 		{
-			"name": "ZhibinJiDentistry",
 			"path": "."
+		},
+		{
+			"path": "../Semy Website/bootstrap"
 		}
-	],
-	"settings": {}
+	]
 }
