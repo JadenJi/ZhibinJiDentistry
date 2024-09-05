@@ -9,6 +9,8 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -18,6 +20,7 @@ body {
 
 section {
   padding: 4em 8em;
+  overflow: hidden;
 }
 
 .picture {
@@ -40,12 +43,12 @@ section {
 }
 
 a {
-  color: #009970;
+  color: #3180A0;
   text-decoration: none;
 }
 
 a:hover {
-  color: #00cc95;
+  color: #3180A0;
   text-decoration: none;
 }
 
@@ -69,6 +72,7 @@ h6 {
   text-align: center;
   margin-right: 2rem;
   margin-left: 2rem;
+  overflow: hidden;
 }
 
 .card-img {
@@ -79,6 +83,34 @@ h6 {
   display: block;
   margin: auto;
   position: relative;
+  overflow: hidden;
+}
+
+
+@keyframes zoom {
+  to {
+      
+      transform:  scale(0.8);
+  }
+}
+
+@keyframes reverseZoom {
+  from {
+      
+      transform: scale(0.8);
+  }
+  to {
+      
+      transform: scale(1);
+  }
+}
+
+.card:hover {
+  animation: zoom 0.5s ease forwards;
+}
+
+.card:not(:hover){
+  animation: reverseZoom 0.5s ease forwards;
 }
 
 .inner-page {
@@ -128,7 +160,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #00c28e;
+  background: #3180A0;
   color: #fff;
 }
 
@@ -154,10 +186,12 @@ h6 {
   z-index: 997;
   transition: all 0.5s;
   top: 20px;
+  overflow: hidden;
 }
 
 #header .header-container {
   background: #fff;
+  overflow: hidden;
 }
 
 #header.header-scrolled {
@@ -172,10 +206,9 @@ h6 {
   width: 200px;
   scale: 1;
   display: block;
-}
-
-.img-fluid {
-
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 @media (max-width: 992px) {
@@ -255,7 +288,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #009970;
+  color: #3180A0;
 }
 
 .navbar .getstarted,
@@ -271,7 +304,7 @@ h6 {
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
   color: #fff;
-  background: #00b383;
+  background: #3180A0;
 }
 
 .navbar .dropdown ul {
@@ -306,7 +339,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #009970;
+  color: #3180A0;
 }
 
 .navbar .dropdown:hover>ul {
@@ -401,7 +434,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #009970;
+  color: #3180A0;
 }
 
 .navbar-mobile .getstarted,
@@ -436,7 +469,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #009970;
+  color: #3180A0;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -447,17 +480,18 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
   height: 40vh;
   background-size: cover;
   position: relative;
   color: white;
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
+  
 }
 
 #hero .container {
   padding-top: 80px;
+  overflow: hidden;
 }
 
 /* #hero:before {
@@ -504,8 +538,8 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #009970;
-  border: 2px solid #009970;
+  background: #3180A0;
+  border: 2px solid #3180A0;
 }
 
 @media (min-width: 1024px) {
@@ -532,8 +566,14 @@ h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+.text {
+  padding-left: 1rem;
+  padding-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 section {
-  padding: 60px 0;
+  padding: 60px 2rem 60px 2rem;
   overflow: hidden;
 }
 
@@ -560,7 +600,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #009970;
+  background: #3180A0;
   bottom: 0;
   left: 0;
 }
@@ -658,7 +698,7 @@ section {
 --------------------------------------------------------------*/
 .why-us .content {
   padding: 30px;
-  background: #009970;
+  background: #3180A0;
   border-radius: 4px;
   color: #fff;
 }
@@ -757,8 +797,8 @@ section {
 }
 
 .cta .cta-btn:hover {
-  background: #009970;
-  border: 2px solid #009970;
+  background: #3180A0;
+  border: 2px solid #3180A0;
 }
 
 /*--------------------------------------------------------------
@@ -782,7 +822,7 @@ section {
   justify-content: center;
   margin-bottom: 20px;
   transition: ease-in-out 0.3s;
-  color: #009970;
+  color: #3180A0;
 }
 
 .services .icon-box .icon i {
@@ -817,7 +857,7 @@ section {
 
 .services .icon-box:hover .icon {
   color: #fff;
-  background: #009970;
+  background: #3180A0;
 }
 
 /*--------------------------------------------------------------
@@ -1049,7 +1089,7 @@ section {
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: #00cc95;
+  color: #3180A0;
   font-size: 26px;
 }
 
@@ -1081,11 +1121,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #009970;
+  border: 1px solid #3180A0;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #009970;
+  background-color: #3180A0;
 }
 
 /*--------------------------------------------------------------
