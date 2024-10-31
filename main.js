@@ -57,6 +57,8 @@
       }
     })
   }
+
+  
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
   /**

@@ -31,7 +31,7 @@ section {
 }
 
 .picture img {
-  height: 40vw;
+  height: 600px;
   border-radius: 10px;
 }
 
@@ -185,7 +185,6 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  top: 20px;
   overflow: hidden;
 }
 
@@ -215,12 +214,12 @@ h6 {
   #header {
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
     top: 0;
-    background: #009970;
+    background: #eff8f6a0;
   }
 
   #header.header-scrolled,
   #header .header-container {
-    background: #009970;
+    background: #eff8f6a0;
   }
 
   
@@ -233,14 +232,18 @@ h6 {
 * Desktop Navigation 
 */
 
-.sticky {
-  position: fixed;
+.sticky{
+  position: sticky;
   top: 0;
   width: 100%;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
 }
 
 .navbar {
-  padding: 0;
+  padding-top: 2rem;
   display: inline-flex;
   z-index: 9999;
   background-color: white;
@@ -484,7 +487,7 @@ h6 {
 }
 
 #hero {
-  height: 300px;
+  min-height: 30vh;
   background-size: cover;
   position: relative;
   color: white;
@@ -571,7 +574,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 .text {
-  padding-left: 1rem;
+  padding-left: 2rem;
   padding-right: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -638,40 +641,53 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .content h2 {
+.about .text h2 {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 30px;
+  line-height: 30px;
   margin-bottom: 20px;
+  color:#2E80A0;
   text-transform: uppercase;
 }
 
-.about .content h3 {
+.about .text h3 {
   font-weight: 500;
   line-height: 32px;
   font-size: 24px;
 }
 
-.about .content ul {
-  list-style: none;
-  padding: 0;
+.about .text a {
+  color: #2e80a0;
 }
 
-.about .content ul li {
-  padding: 10px 0 0 28px;
-  position: relative;
+.about .text a:hover {
+  color: #67cfe3;
 }
 
-.about .content ul i {
-  left: 0;
-  top: 7px;
-  position: absolute;
-  font-size: 20px;
-  color: #009970;
+.about .text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 
-.about .content p:last-child {
-  margin-bottom: 0;
+.about {
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  padding-right: 1rem;
+}
+
+.about .text {
+  background: rgba(255, 255, 255, 0.70);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 700px;
+}
+
+.info {
+  background-image: url(img/Bg@150x-8.png);
+  background-size: cover;
+  display: flex;
 }
 
 /*--------------------------------------------------------------
@@ -770,19 +786,18 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url("../img/cta-bg.jpg") fixed center center;
   background-size: cover;
-  padding: 60px 0;
+  
 }
 
 .cta h3 {
-  color: #fff;
+  color: #728fae;
   font-size: 28px;
   font-weight: 700;
 }
 
 .cta p {
-  color: #fff;
+  color: #728fae;
 }
 
 .cta .cta-btn {
@@ -796,13 +811,13 @@ section {
   border-radius: 25px;
   transition: 0.5s;
   margin-top: 10px;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #728fae;
 }
 
 .cta .cta-btn:hover {
   background: #3180A0;
   border: 2px solid #3180A0;
+  color: white;
 }
 
 /*--------------------------------------------------------------
@@ -947,6 +962,7 @@ section {
   justify-content: flex-end;
   align-items: center;
   padding: 20px;
+  background-color: #2e80a05f;
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
